@@ -1,0 +1,5 @@
+#!/bin/bash
+
+test -d docs || mkdir docs
+
+find src -name "*.java" | xargs javadoc -d docs
