@@ -8,6 +8,13 @@ Build and Run the Executables
 
 The project has been developed in Java using plain text editor and command-line tools. BASH script tools are employed to build and execute the code. I expect the project to be easily imported to an IDE or build toolchains if needed.
 
+System requirement:
+
+1. Java and JDK 13 (may be compatible with lower versions, but not tested)
+2. BASH - optional if to use the automated build scripts.
+
+    Code and building tools are tested on macOS with default Java shipped with the system. Please make sure any input file are saved in UTF-8. Other charset are not tested and may break the program.
+
 Build the Project
 -----------------
 Make sure the current working directory is at the root of this project, where the script `build-project` is located. 
