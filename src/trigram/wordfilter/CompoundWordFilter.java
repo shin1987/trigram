@@ -2,7 +2,7 @@ package trigram.wordfilter;
 import java.util.ArrayList;
 
 /**
- * Compond multiple word filters into a single WordFilter. 
+ * Compound multiple word filters into a single WordFilter. 
  *
  * A word will be accepted when any of the sub-filter accepts it.
  */
