@@ -20,6 +20,8 @@ public class RandomTextGenerator implements trigram.core.TextGenerator
 
     /** 
      * Initialise internal random number generator with given seed.
+     *
+     * @param seed to seed the random generator
      */
     public RandomTextGenerator(long seed)
     {
@@ -28,6 +30,7 @@ public class RandomTextGenerator implements trigram.core.TextGenerator
 
     /** 
      * Directly initialise internal random number generator.
+     * @param rand use an external random number generator.
      */
     public RandomTextGenerator(final Random rand)
     {

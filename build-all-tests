@@ -1,0 +1,8 @@
+#!/bin/bash
+
+JUNIT="3rdparty/junit-platform-console-standalone-1.8.1.jar"
+HAMCREST="3rdparty/hamcrest-core-1.3.jar"
+DEPS=$JUNIT:$HAMCREST
+
+find tests -name "*Test.java" | \
+    xargs javac -sourcepath src:tests -cp $DEPS -d build

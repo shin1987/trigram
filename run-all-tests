@@ -1,0 +1,6 @@
+#!/bin/bash
+
+find build -name "*Test.class" | sed -E "s!(build/|\.class)!!g" | \
+    sed 's!/!.!g' | awk '{print "-c " $0}' |
+    xargs java -jar 3rdparty/junit-platform-console-standalone-1.8.1.jar \
+          --cp build
