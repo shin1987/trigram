@@ -23,7 +23,7 @@ A sample text file has been provided under `data` directory for quick verifcatio
 
 `java -cp build data/data0.txt`
 
-if the program has been compiled corrected, the generated text should appear as `a.txt` in the current working directory.
+if the program has been compiled correctly, the generated text should appear as `a.txt` in the current working directory.
 
 A note on input file format:
 There is an extra script called `processing-data` which prepares an arbitary text file to a more friendly format. To run it:
@@ -66,11 +66,11 @@ The main program treats the whole input document as a single piece of source tex
 
 Handling Output Paragraphs
 --------------------------
-When multiple output paragraphs are desired, one can easily run the program multiple times and piece together the results. Or it can be handled with more heuristic sampling for example to avoid two paragraphs looking too similar.
+When multiple output paragraphs are desired, one can easily run the program multiple times and piece together the results. Or it can be handled with more heuristic sampling - for example to avoid two paragraphs looking too similar.
 
 Backtracing
 -----------
-Backtracing can be used to exhuastively searches many possible text generations and output only those matches some predefined condition. It is easier to implement backtracing with recursive calls instead of loops which is used in current random sampling. 
+Backtracing can be used to exhuastively searches many possible text generations and output only those match some predefined condition. It is easier to implement backtracing with recursive calls instead of loops which is used in current random sampling. 
 
 The new algorithm should be implemented by deriving `trigram.core.TextGenerator` class and it should then integrate with the rest unchanged.
 
