@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"trigram"},{"l":"trigram.core"},{"l":"trigram.wordfilter"}]
