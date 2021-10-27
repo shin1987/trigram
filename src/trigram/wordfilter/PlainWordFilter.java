@@ -13,6 +13,6 @@ public class PlainWordFilter implements WordFilter
      */
     public boolean accept(final String word)
     {
-        return word.matches("\\w+");
+        return word.matches("[a-zA-Z]+");
     }
 }

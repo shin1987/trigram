@@ -29,7 +29,7 @@ public class PlainWordFilterTest
     @Test
     void testNumbers()
     {
-        assertThat(filter.accept("H3llo"), is(true));
+        assertThat(filter.accept("H3llo"), is(false));
                 
     }
 
