@@ -1,0 +1,5 @@
+#!/bin/bash
+
+JUNIT="3rdparty/junit-platform-console-standalone-1.8.1.jar"
+
+java -jar $JUNIT --cp build -c "$@"

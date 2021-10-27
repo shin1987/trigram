@@ -1,0 +1,20 @@
+#!/bin/bash
+
+PACKAGE_NAME=$(echo $1 | sed -E 's!/[A-Za-z0-9]+\.java$!!g' | \
+                   sed -E "s!^tests/!!g" | sed "s!/!.!g")
+CLASS_NAME=$(echo $1 | egrep -o '[A-Za-z0-9]+\.java' | sed 's/.java//g')
+
+(
+    cat <<EOF
+package $PACKAGE_NAME;
+
+import org.junit.jupiter.api.Test;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+
+public class $CLASS_NAME
+{
+}
+
+EOF
+) > $1
