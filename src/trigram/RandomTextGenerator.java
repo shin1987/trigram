@@ -35,18 +35,25 @@ public class RandomTextGenerator implements trigram.core.TextGenerator
     }
 
     @Override
-    public String generate(final TrigramDictionary dict)
+    public String generate(final TrigramDictionary dict, final long length)
     {
         String ans = "";
         // Begin by sampling keys
         String [] key = dict.getKey(rand.nextInt(dict.getNumOfEntries()));
         ans += key[0] + " " + key[1];
         String [] word = dict.lookup(key[0], key[1]);
-        while (word != null) // terminate when hit a dead end.
+
+        long count = 2; // 2 words has been added
+        
+        while (word != null && count < length) // terminate when hit a dead end.
         {
             // Sample a random word from the collection
             String selected = word[rand.nextInt(word.length)];
             ans += " " + selected;
+
+            count++; // increment count
+
+            // Sample next word
             key[0] = key[1];
             key[1] = selected;
             word = dict.lookup(key[0], key[1]);

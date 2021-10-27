@@ -24,7 +24,7 @@ public class TrigramDemo
 
         var textgen = new RandomTextGenerator();
 
-        String output = textgen.generate(dict);
+        String output = textgen.generate(dict, 500);
         
         try {
             FileWriter fout = new FileWriter(args[1]);

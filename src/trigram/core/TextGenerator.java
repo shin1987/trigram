@@ -11,7 +11,8 @@ public interface TextGenerator
     /**
      * Create text based on some dictionary.
      * @param dict lookup table stores trigram sequences.
+     * @param length maximal number of words to generate.
      * @return a single string represents the final text.
      */
-    String generate(TrigramDictionary dict);
+    String generate(TrigramDictionary dict, long length);
 }

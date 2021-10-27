@@ -25,7 +25,8 @@ public class RandomTextGeneratorTest
                    dict.getNumOfEntries(), is(4));
         int [] sequence = {0, 1, 0, 0, 0, 1, 1};
         var textgen = new RandomTextGenerator(new DummyRandom(sequence));
-        assertThat(textgen.generate(dict), is("I wish I may I wish I might"));
+        assertThat(textgen.generate(dict, 100),
+                   is("I wish I may I wish I might"));
     }
 }
 
