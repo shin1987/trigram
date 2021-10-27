@@ -4,6 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.io.IOException;
 import java.io.FileWriter;
+import trigram.wordfilter.*;
 
 /**
  * Main entrance to the program.
@@ -43,7 +44,9 @@ public class TrigramDemo
         }
 
         // Create trigram dictionary
-        var filter = new trigram.wordfilter.PlainWordFilter();
+        var filter = new CompondWordFilter();
+        filter.add(new PlainWordFilter()).add(new SimplePunctuationFilter());
+        
         var scanner = new FilteredScanner(filter);
         var dict = new Dictionary();
         scanner.scan(contents.split(" "), dict);

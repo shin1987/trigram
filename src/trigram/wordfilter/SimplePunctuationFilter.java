@@ -8,7 +8,7 @@ public class SimplePunctuationFilter implements WordFilter
     @Override
     public boolean accept(final String word)
     {
-        return word == "," || word == "." || word == "?" || word == "!" ||
-                word == ";";
+        boolean test = word.matches(",|.|;|\\?|\\!");
+        return test;
     }
 }
