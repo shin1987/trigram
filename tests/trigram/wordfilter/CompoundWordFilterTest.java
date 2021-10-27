@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.*;
 
-public class CompondWordFilterTest
+public class CompoundWordFilterTest
 {
     @Test
     void testFilter()
     {
-        var filter = new CompondWordFilter();
+        var filter = new CompoundWordFilter();
         filter.add(new DummyFilter(3)).add(new DummyFilter(5));
         assertThat("length 3", filter.accept("abc"), is(true));
         assertThat("length 5", filter.accept("abcde"), is(true));

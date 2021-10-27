@@ -44,7 +44,7 @@ public class TrigramDemo
         }
 
         // Create trigram dictionary
-        var filter = new CompondWordFilter();
+        var filter = new CompoundWordFilter();
         filter.add(new PlainWordFilter()).add(new SimplePunctuationFilter());
         
         var scanner = new FilteredScanner(filter);
@@ -52,7 +52,7 @@ public class TrigramDemo
         scanner.scan(contents.split(" "), dict);
 
         // Sampling text
-        var textgen = new RandomTextGenerator();
+        var textgen = new RandomTextGenerator(12342302);
 
         String text = textgen.generate(dict, 500);
 

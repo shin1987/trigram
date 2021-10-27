@@ -6,7 +6,7 @@ import java.util.ArrayList;
  *
  * A word will be accepted when any of the sub-filter accepts it.
  */
-public class CompondWordFilter implements WordFilter
+public class CompoundWordFilter implements WordFilter
 {
     private ArrayList<WordFilter> filter = new ArrayList<WordFilter>();
     
@@ -14,7 +14,7 @@ public class CompondWordFilter implements WordFilter
      * Add a filter
      * @param filter filter to be added.
      */
-    public CompondWordFilter add(final WordFilter filter)
+    public CompoundWordFilter add(final WordFilter filter)
     {
         this.filter.add(filter);
         return this;
