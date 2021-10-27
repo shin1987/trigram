@@ -19,6 +19,12 @@ To run the demo program, execute:
 
 where input.txt is the document from which a trigram lookup table would be built and output.txt is the result file name. If `output.txt` is not provided, a temporary file named `a.txt` would be created under current working directory.
 
+A sample text file has been provided under `data` directory for quick verifcation. To run the program with the example test:
+
+`java -cp build data/data0.txt`
+
+if the program has been compiled corrected, the generated text should appear as `a.txt` in the current working directory.
+
 A note on input file format:
 There is an extra script called `processing-data` which prepares an arbitary text file to a more friendly format. To run it:
 
