@@ -13,6 +13,7 @@ public class CompoundWordFilter implements WordFilter
     /**
      * Add a filter
      * @param filter filter to be added.
+     * @return this instance to enable chain-style syntax
      */
     public CompoundWordFilter add(final WordFilter filter)
     {
